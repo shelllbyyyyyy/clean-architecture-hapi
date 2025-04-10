@@ -14,6 +14,9 @@ const config = {
     host: process.env.HOST,
     port: process.env.PORT,
   },
+  database: {
+    databaseUrl: process.env.DATABASE_URL,
+  },
 };
 
 module.exports = config;
