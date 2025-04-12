@@ -1,4 +1,4 @@
-import NotFoundError from "../NotFoundError";
+import NotFoundError from "../NotFoundError.js";
 
 describe("NotFoundError", () => {
   it("should create error correctly", () => {

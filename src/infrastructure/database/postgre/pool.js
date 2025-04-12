@@ -1,7 +1,7 @@
-import { Pool } from "pg";
-import config from "../../../common/config";
+import Pkg from "pg";
+import config from "../../../common/config.js";
 
-const pool = new Pool({
+const pool = new Pkg.Pool({
   connectionString: config.database.databaseUrl,
 });
 
