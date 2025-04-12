@@ -1,4 +1,4 @@
-const InvariantError = require("../InvariantError");
+import InvariantError from "../InvariantError";
 
 describe("InvariantError", () => {
   it("should create an error correctly", () => {

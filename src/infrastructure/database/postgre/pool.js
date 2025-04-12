@@ -1,8 +1,8 @@
-const { Pool } = require("pg");
-const config = require("../../../common/config");
+import { Pool } from "pg";
+import config from "../../../common/config";
 
 const pool = new Pool({
   connectionString: config.database.databaseUrl,
 });
 
-module.exports = pool;
+export default pool;

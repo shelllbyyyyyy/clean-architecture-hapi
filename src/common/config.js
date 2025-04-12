@@ -1,22 +1,23 @@
-const dotenv = require("dotenv");
-const path = require("path");
+import { config as cfg } from "dotenv";
+import path from "path";
 
 if (process.env.NODE_ENV === "test") {
-  dotenv.config({
+  cfg({
     path: path.resolve(process.cwd(), ".test.env"),
   });
 } else {
-  dotenv.config();
+  cfg();
 }
 
 const config = {
   app: {
     host: process.env.HOST,
     port: process.env.PORT,
+    debug: process.env.NODE_ENV === "development" ? { request: ["error"] } : {},
   },
   database: {
     databaseUrl: process.env.DATABASE_URL,
   },
 };
 
-module.exports = config;
+export default config;

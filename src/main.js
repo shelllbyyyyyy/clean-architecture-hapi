@@ -1,5 +1,5 @@
-const Hapi = require("@hapi/hapi");
-const config = require("./common/config");
+import Hapi from "@hapi/hapi";
+import config from "./common/config";
 
 const createServer = () => {
   const server = Hapi.server({
@@ -20,4 +20,4 @@ const createServer = () => {
   return server;
 };
 
-module.exports = createServer;
+export default createServer;

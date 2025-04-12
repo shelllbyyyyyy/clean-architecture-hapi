@@ -1,4 +1,4 @@
-const NotFoundError = require("../NotFoundError");
+import NotFoundError from "../NotFoundError";
 
 describe("NotFoundError", () => {
   it("should create error correctly", () => {
